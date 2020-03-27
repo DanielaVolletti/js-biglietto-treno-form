@@ -18,8 +18,6 @@ var kmUtente = document.getElementById('km-utente');
 var bottoneGenera = document.getElementById('bottone-genera');
 
 
-
-
 // salvo dati inseriti dall'utente al momento del click del bottone
 bottoneGenera.addEventListener("click",
 function () {
@@ -33,37 +31,29 @@ function () {
     // var prezzo Biglietto
     var costoBiglietto = parseInt(valoreKm * 0.21);
 
-    console.log(costoBiglietto);
+    // verifico il prezzo del biglietto
+    console.log("Il prezzo del biglietto intero è: " + costoBiglietto);
 
+    // creo variabile per l'età dell'utente, specificando il valore
+    var etaUtente = document.getElementById('eta').value;
 
-    var etaUtente = document.getElementById('eta');
-
-    // opzione età Maggiorenne
-    var maggiorenne = document.getElementById('maggiorenne');
-
-    // opzione età Minorenne
-    var minorenne = document.getElementById('minorenne');
-
-    // opzione over 65
-    var vecchio = document.getElementById('oversessantacinque');
+    // controllo se cliccando sull'età, questa corrisponde all'età inserita
+    console.log("L'età inserita dall'utente è: " + etaUtente);
 
     // sconto 20% minorenni e 40% età superiore ai 66 anni
-    if (etaUtente = vecchio) {
+    if (etaUtente == "oversessantacinque") {
       prezzoFinale = costoBiglietto - ((costoBiglietto * 40) / 100);
-    } else if (etaUtente = minorenne){
+    } else if (etaUtente == "minorenne"){
       prezzoFinale = costoBiglietto - ((costoBiglietto * 20) / 100);
-    } else if (etaUtente = maggiorenne) {
+    } else if (etaUtente == "maggiorenne") {
       prezzoFinale = costoBiglietto;
     }
 
-    console.log(prezzoFinale);
+    // controllo il prezzo al netto degli sconti
+    console.log("Il prezzo finale è " + prezzoFinale);
 
     // verifico che siano stati ricordati i valori inseriti
-    console.log(valoreNome, valoreKm, prezzoFinale);
-
-
-
-
+    console.log("Utente " + valoreNome + ", per km " + valoreKm + ", il prezzo del biglietto al netto degli sconti è " + prezzoFinale);
 
   }
 
