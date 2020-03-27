@@ -6,22 +6,56 @@
     <title>Biglietto del treno</title>
   </head>
   <body>
-    <div id="input-utente">
-      <input id="nome-utente" type="text" name="" value="">
-      <input id="km-utente" type="number" name="" value="">
-      <select id="eta" class="" name="">
-        <option value="maggiorenne">Maggiorenne</option>
-        <option  value="minorenne">Minorenne</option>
-        <option  value="oversessantacinque">Over 65</option>
-      </select>
+    <div id="contenitore-input-output">
+      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+      <div id="input-utente">
+        <!-- sezione info inserite da utente -->
+        <section id="info">
+          <input id="nome-utente" type="text" name="" value="">
+          <input id="km-utente" type="number" name="" value="">
+          <select id="eta" class="" name="">
+            <option value="maggiorenne">Maggiorenne</option>
+            <option value="minorenne">Minorenne</option>
+            <option  value="oversessantacinque">Over 65</option>
+          </select>
+        </section>
+        <!-- bottoni per ouput -->
+        <section id="bottoni">
+          <button id="bottone-genera" type="button" name="button">Genera</button>
+          <button id="bottone-annulla" type="button" name="button">Annulla</button>
+        </section>
+      </div>
 
-      <button id="bottone-genera" type="button" name="button">Genera</button>
-      <button id="bottone-annulla" type="button" name="button">Annulla</button>
+      <!-- parte output -->
+      <div id="output-utente">
+        <h1>IL TUO BIGLIETTO</h1>
+        <h4>DETTAGLIO PASSEGGERI</h4>
+        <section class="">
+          <div class="">
+            <h4>NOME PASSEGGERO</h4>
+            <h6 id="nome-passeggero"></h6>
+          </div>
+          <div class="">
+            <table>
+              <tr>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice CP</th>
+                <th>Costo Biglietto</th>
+              </tr>
+              <tr>
+                <td id="tipo-offerta"></td>
+                <td id ="tipo-carrozza"></td>
+                <td id="codice-biglietto"></td>
+                <td id="prezzo-biglietto"></td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+      </div>
     </div>
 
-    <div id="output-utente">
-
-    </div>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

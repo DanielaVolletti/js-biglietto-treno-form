@@ -1,0 +1,34 @@
+/* regole generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* contenitore di tutto il corpo della pagina */
+#contenitore-input-output {
+  background-color: #C41329;
+  height: 100vh;
+}
+
+/* regole generali due sezioni principali */
+#input-utente, #output-utente {
+  background-color: white;
+}
+
+/* sezione input utente */
+#input-utente {
+  margin: 0 15%;
+}
+
+/* sezione info utente */
+#info {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+/* bottoni */
+#bottoni {
+  text-align: center;
+}

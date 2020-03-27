@@ -46,12 +46,18 @@ function () {
     // controllo se cliccando sull'età, questa corrisponde all'età inserita
     console.log("L'età inserita dall'utente è: " + etaUtente);
 
+    // creo variabile tipo di offerta per età
+    var offerta;
+
     // sconto 20% minorenni e 40% età superiore ai 66 anni
     if (etaUtente == "oversessantacinque") {
       prezzoFinale = costoBiglietto - ((costoBiglietto * 40) / 100);
+      offerta = "Offerta Silver";
     } else if (etaUtente == "minorenne"){
+      offerta = "Offerta Young";
       prezzoFinale = costoBiglietto - ((costoBiglietto * 20) / 100);
     } else if (etaUtente == "maggiorenne") {
+      offerta = "Biglietto standard";
       prezzoFinale = costoBiglietto;
     }
 
@@ -60,7 +66,26 @@ function () {
 
     // verifico che siano stati ricordati i valori inseriti
     console.log("Utente " + valoreNome + ", per km " + valoreKm + ", il prezzo del biglietto al netto degli sconti è " + prezzoFinale);
+
+
+    // OUTPUT IN PAGINA------------------------------
+
+    // nome del PASSEGGERO
+    document.getElementById('nome-passeggero').innerHTML = valoreNome;
+
+    // tipo di offerta del biglietto in base all'età
+    document.getElementById('tipo-offerta').innerHTML = offerta;
+
+    // carrozza assegnata
+    document.getElementById('tipo-carrozza').innerHTML = Math.floor(Math.random()* 10) + 1;
+
+    // codice del BIGLIETTO
+      document.getElementById('codice-biglietto').innerHTML = Math.floor(Math.random()* 99000) + 1000;
+
+    // prezzo del BIGLIETTO
+    document.getElementById('prezzo-biglietto').innerHTML = prezzoFinale + " €";
   }
+
 )
 
 // cliccando annulla pulisco i campi inseriti
