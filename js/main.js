@@ -14,8 +14,11 @@ var nomeUtente = document.getElementById('nome-utente');
 // input km utente
 var kmUtente = document.getElementById('km-utente');
 
-// input bottone
+// input bottone genera
 var bottoneGenera = document.getElementById('bottone-genera');
+
+// input bottone Annulla
+var bottoneAnnulla = document.getElementById('bottone-annulla');
 
 
 // salvo dati inseriti dall'utente al momento del click del bottone
@@ -34,8 +37,11 @@ function () {
     // verifico il prezzo del biglietto
     console.log("Il prezzo del biglietto intero è: " + costoBiglietto);
 
-    // creo variabile per l'età dell'utente, specificando il valore
-    var etaUtente = document.getElementById('eta').value;
+    // creo variabile per l'età dell'utente
+    var eta = document.getElementById('eta');
+
+    // creo variabile valore inserito età utente
+    etaUtente = eta.value;
 
     // controllo se cliccando sull'età, questa corrisponde all'età inserita
     console.log("L'età inserita dall'utente è: " + etaUtente);
@@ -54,7 +60,14 @@ function () {
 
     // verifico che siano stati ricordati i valori inseriti
     console.log("Utente " + valoreNome + ", per km " + valoreKm + ", il prezzo del biglietto al netto degli sconti è " + prezzoFinale);
-
   }
+)
 
+// cliccando annulla pulisco i campi inseriti
+bottoneAnnulla.addEventListener("click",
+function () {
+    nomeUtente.value = "";
+    kmUtente.value = "";
+    eta.value = "maggiorenne";
+  }
 )
