@@ -14,11 +14,17 @@
 /* regole generali due sezioni principali */
 #input-utente, #output-utente {
   background-color: white;
+  margin: 0 15%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
 }
 
 /* sezione input utente */
 #input-utente {
-  margin: 0 15%;
+
 }
 
 /* sezione info utente */
