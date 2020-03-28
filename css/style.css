@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* contenitore di tutto il corpo della pagina */
@@ -14,27 +15,56 @@
 /* regole generali due sezioni principali */
 #input-utente, #output-utente {
   background-color: white;
-  margin: 0 15%;
+  margin: 0 10%;
 }
 
 h1 {
   text-align: center;
   color: white;
+  padding: 20px;
 }
 
 /* sezione input utente */
 #input-utente {
-
+  border-radius: 10px;
 }
 
 /* sezione info utente */
 #info {
   display: flex;
   justify-content: space-around;
-  padding: 50px;
+  padding: 30px 100px 50px;
+}
+
+.info-specifiche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-specifiche label {
+  padding-bottom: 10px;
+  color: #C41329;
+  font-weight: bold;
+}
+
+.info-specifiche input, #eta {
+  border-radius: 5px;
+  border: solid 1px #C41329;
+  padding: 5px;
 }
 
 /* bottoni */
 #bottoni {
   text-align: center;
+  padding-bottom: 20px;
+}
+
+#bottoni button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: solid 1px #C41329;
+  color: #C41329;
+  font-size: 15px;
+  font-weight: bold;
 }

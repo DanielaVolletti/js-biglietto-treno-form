@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Biglietto del treno</title>
   </head>
   <body>
@@ -11,16 +12,22 @@
       <div id="input-utente">
         <!-- sezione info inserite da utente -->
         <section id="info">
-          <label for="">Nome e Cognome</label>
-          <input id="nome-utente" type="text" name="" value="">
-          <label for="">Km da percorrere</label>
-          <input id="km-utente" type="number" name="" value="">
-          <label for="">Fascia d'età</label>
-          <select id="eta" class="" name="">
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="oversessantacinque">Over 65</option>
-          </select>
+          <div class="info-specifiche">
+            <label for="">Nome e Cognome</label>
+            <input id="nome-utente" type="text" name="" value="">
+          </div>
+          <div class="info-specifiche">
+            <label for="">Km da percorrere</label>
+            <input id="km-utente" type="number" name="" value="">
+          </div>
+          <div class="info-specifiche">
+            <label for="">Fascia d'età</label>
+            <select id="eta" class="" name="">
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="minorenne">Minorenne</option>
+              <option value="oversessantacinque">Over 65</option>
+            </select>
+          </div>
         </section>
         <!-- bottoni per ouput -->
         <section id="bottoni">

@@ -20,7 +20,6 @@ var bottoneGenera = document.getElementById('bottone-genera');
 // input bottone Annulla
 var bottoneAnnulla = document.getElementById('bottone-annulla');
 
-
 // salvo dati inseriti dall'utente al momento del click del bottone
 bottoneGenera.addEventListener("click",
 function () {
