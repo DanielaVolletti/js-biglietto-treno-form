@@ -55,7 +55,7 @@ h1 {
 }
 
 .info-specifiche input:focus, #eta:focus {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
 /* bottoni */
