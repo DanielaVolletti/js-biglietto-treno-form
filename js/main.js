@@ -6,7 +6,7 @@ L’importante è usare eventi sui 2 bottoni principali, e sviluppare le logiche
 */
 
 // variabili per assegnazione valore
-var valoreNome, valoreKm;
+var valoreNome, valoreKm, output;
 
 // input nome utente
 var nomeUtente = document.getElementById('nome-utente');
@@ -20,9 +20,16 @@ var bottoneGenera = document.getElementById('bottone-genera');
 // input bottone Annulla
 var bottoneAnnulla = document.getElementById('bottone-annulla');
 
+// rendo invisibile il biglietto inizialmente
+document.getElementById('output-utente').style.display = "none";
+
 // salvo dati inseriti dall'utente al momento del click del bottone
 bottoneGenera.addEventListener("click",
 function () {
+
+    // rendo visibile il biglietto al click
+    document.getElementById('output-utente').style.display = "block";
+
     // catturo dati inseriti utente
     valoreNome = nomeUtente.value;
     valoreKm = kmUtente.value;
@@ -91,7 +98,7 @@ function () {
 bottoneAnnulla.addEventListener("click",
 function () {
 
-  // pulisco campi parte superiore generazione biglietto utente
+    // pulisco campi parte superiore generazione biglietto utente
     nomeUtente.value = "";
     kmUtente.value = "";
     eta.value = "maggiorenne";
@@ -103,4 +110,5 @@ function () {
     document.getElementById('codice-biglietto').innerHTML = "";
     document.getElementById('prezzo-biglietto').innerHTML = "";
   }
+
 )
