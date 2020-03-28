@@ -54,10 +54,9 @@ h1 {
   padding: 5px;
 }
 
-.info-specifiche input:focus, #eta:focus {
-  background-color: rgba(255, 0, 0, 0.5);
+.info-specifiche input:hover, #eta:hover {
+  cursor: pointer;
 }
-
 /* bottoni */
 #bottoni {
   text-align: center;
@@ -78,12 +77,16 @@ h1 {
   color: white;
 }
 
+#bottoni button:hover {
+  cursor: pointer;
+}
 
 
 /* output biglietto */
 
 #output-utente {
   padding: 20px;
+  border-radius: 10px;
 }
 
 .contenitore-biglietto {
@@ -110,12 +113,8 @@ h1 {
   padding-top: 20px;
 }
 
-#tabella-biglietto th {
+#tabella-biglietto th, td {
   padding-right: 50px;
   padding-bottom: 30px;
   text-align: left;
-}
-
-#tabella-biglietto td {
-  padding-right: 40px;
 }

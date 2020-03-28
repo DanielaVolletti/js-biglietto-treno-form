@@ -2,11 +2,10 @@
 L’importante è usare eventi sui 2 bottoni principali, e sviluppare le logiche che sottendono;
 “Genera” mi calcolerà il prezzo del biglietto a partire dai dati inseriti negli input, e mi draà l’output in pagina, nel modo migliore possibile;
 “Annulla” mi fa tornare allo stato iniziale con output pulito (o nascosto) e campi puliti (non vale fare refresh del browser :male-farmer:);
-
 */
 
 // variabili per assegnazione valore
-var valoreNome, valoreKm, output;
+var valoreNome, valoreKm;
 
 // input nome utente
 var nomeUtente = document.getElementById('nome-utente');
@@ -112,6 +111,9 @@ function () {
     document.getElementById('tipo-carrozza').innerHTML = "";
     document.getElementById('codice-biglietto').innerHTML = "";
     document.getElementById('prezzo-biglietto').innerHTML = "";
+
+    // oltre che pulire i campi, faccio scomparire il biglietto
+    document.getElementById('output-utente').style.opacity = "0";
   }
 
 )
