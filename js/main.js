@@ -79,7 +79,7 @@ function () {
     document.getElementById('tipo-carrozza').innerHTML = Math.floor(Math.random()* 10) + 1;
 
     // codice del BIGLIETTO
-      document.getElementById('codice-biglietto').innerHTML = Math.floor(Math.random()* 99000) + 1000;
+    document.getElementById('codice-biglietto').innerHTML = Math.floor(Math.random()* 99000) + 1000;
 
     // prezzo del BIGLIETTO
     document.getElementById('prezzo-biglietto').innerHTML = prezzoFinale + " €";
@@ -90,8 +90,17 @@ function () {
 // cliccando annulla pulisco i campi inseriti
 bottoneAnnulla.addEventListener("click",
 function () {
+
+  // pulisco campi parte superiore generazione biglietto utente
     nomeUtente.value = "";
     kmUtente.value = "";
     eta.value = "maggiorenne";
+
+    // pulisco campi parte biglietto generato
+    document.getElementById('nome-passeggero').innerHTML = "";
+    document.getElementById('tipo-offerta').innerHTML = "";
+    document.getElementById('tipo-carrozza').innerHTML = "";
+    document.getElementById('codice-biglietto').innerHTML = "";
+    document.getElementById('prezzo-biglietto').innerHTML = "";
   }
 )
