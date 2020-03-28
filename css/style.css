@@ -8,8 +8,10 @@
 
 /* contenitore di tutto il corpo della pagina */
 #contenitore-input-output {
-  background-color: #C41329;
   height: 100vh;
+  background-image: url('https://image.winudf.com/v2/image1/Y29tLmdvb2RidWlsZC50cmFpbndhbGxwYXBlcnNfc2NyZWVuXzZfMTU1MDMxNjgyMl8wNzE/screen-6.jpg?fakeurl=1&type=.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* regole generali due sezioni principali */
@@ -27,6 +29,7 @@ h1 {
 /* sezione input utente */
 #input-utente {
   border-radius: 10px;
+  background-color: rgba(250, 250, 250, 0.8);
 }
 
 /* sezione info utente */
