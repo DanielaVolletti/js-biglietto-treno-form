@@ -20,15 +20,18 @@ var bottoneGenera = document.getElementById('bottone-genera');
 // input bottone Annulla
 var bottoneAnnulla = document.getElementById('bottone-annulla');
 
-// rendo invisibile il biglietto inizialmente
-document.getElementById('output-utente').style.display = "none";
+// rendo invisibile il biglietto all'apertura della pagina
+document.getElementById('output-utente').style.opacity = "0";
+
+// creo una transizione di due secondi per far poi apparire il biglietto
+document.getElementById('output-utente').style.transition = "all 2s";
 
 // salvo dati inseriti dall'utente al momento del click del bottone
 bottoneGenera.addEventListener("click",
 function () {
 
     // rendo visibile il biglietto al click
-    document.getElementById('output-utente').style.display = "block";
+    document.getElementById('output-utente').style.opacity = "1";
 
     // catturo dati inseriti utente
     valoreNome = nomeUtente.value;
