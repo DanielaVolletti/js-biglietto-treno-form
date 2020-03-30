@@ -4,14 +4,17 @@ L’importante è usare eventi sui 2 bottoni principali, e sviluppare le logiche
 “Annulla” mi fa tornare allo stato iniziale con output pulito (o nascosto) e campi puliti (non vale fare refresh del browser :male-farmer:);
 */
 
-// variabili per assegnazione valore
-var valoreNome, valoreKm;
+// variabili per assegnazione valore a nome utente, km inseriti ed età inserita
+var valoreNome, valoreKm, etaUtente;
 
 // input nome utente
 var nomeUtente = document.getElementById('nome-utente');
 
 // input km utente
 var kmUtente = document.getElementById('km-utente');
+
+// creo variabile per l'età dell'utente
+var eta = document.getElementById('eta');
 
 // input bottone genera
 var bottoneGenera = document.getElementById('bottone-genera');
@@ -35,27 +38,19 @@ function () {
     // catturo dati inseriti utente
     valoreNome = nomeUtente.value;
     valoreKm = kmUtente.value;
+    etaUtente = eta.value;
 
-    // var prezzo Biglietto
-    var prezzoFinale;
+    // var prezzo finale Biglietto, prezzo biglietto per chilometri e offerta in base a età
+    var prezzoFinale, costoBiglietto, offerta;
 
-    // var prezzo Biglietto
-    var costoBiglietto = parseInt(valoreKm * 0.21);
+    // prezzo Biglietto per chilometri
+    costoBiglietto = parseInt(valoreKm * 0.21);
 
     // verifico il prezzo del biglietto
     console.log("Il prezzo del biglietto intero è: " + costoBiglietto);
 
-    // creo variabile per l'età dell'utente
-    var eta = document.getElementById('eta');
-
-    // creo variabile valore inserito età utente
-    etaUtente = eta.value;
-
     // controllo se cliccando sull'età, questa corrisponde all'età inserita
     console.log("L'età inserita dall'utente è: " + etaUtente);
-
-    // creo variabile tipo di offerta per età
-    var offerta;
 
     // sconto 20% minorenni e 40% età superiore ai 66 anni
     if (etaUtente == "oversessantacinque") {
