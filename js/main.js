@@ -91,7 +91,7 @@ function () {
     document.getElementById('codice-biglietto').innerHTML = Math.floor(Math.random()* 99000) + 1000;
 
     // prezzo del BIGLIETTO
-    document.getElementById('prezzo-biglietto').innerHTML = prezzoFinale + " €";
+    document.getElementById('prezzo-biglietto').innerHTML = prezzoFinale.toFixed(2) + " €";
   }
 
 )
